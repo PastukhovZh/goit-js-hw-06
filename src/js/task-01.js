@@ -16,57 +16,57 @@
 // Elements: 5
 
 /////////////////////////////////////////////////
-const fn = () => {
+// const fn = () => {
     
-    const test = document.querySelector('#categories')
+//     const test = document.querySelector('#categories')
     
 
-console.log(test)
+// console.log(test)
 
-}
+// }
 
-fn()
+// fn()
 
 //////////////////////////////////////////////////////////////////////////////
-// const numbersOfCategories = document.querySelectorAll(".item");
+const numbersOfCategories = document.querySelectorAll(".item");
 
-// console.log(`Number of categories: ${numbersOfCategories.length}`);
-
-
-// const listOfCategoriesItems = document.querySelectorAll('.item');
+console.log(`Number of categories: ${numbersOfCategories.length}`);
 
 
-// const firstTitleCategories = document.querySelector('h2').textContent;
-
-// const firstElementOfList = listOfCategoriesItems[0].childNodes[3].children.length;
+const listOfCategoriesItems = document.querySelectorAll('.item');
 
 
-// console.log(`Category: ${firstTitleCategories}`);
+const firstTitleCategories = document.querySelector('h2').textContent;
 
-// console.log(`Elements: ${firstElementOfList}`);
-
-
-
-// const secondTitleCategories = numbersOfCategories[1].querySelector('h2').textContent;
+const firstElementOfList = listOfCategoriesItems[0].childNodes[3].children.length;
 
 
-// const seondElementOfList = listOfCategoriesItems[1].childNodes[3].children.length;
+console.log(`Category: ${firstTitleCategories}`);
+
+console.log(`Elements: ${firstElementOfList}`);
 
 
-// console.log(`Category: ${secondTitleCategories}`);
 
-// console.log(`Elements: ${seondElementOfList}`);
-
-
-// const thirdTitleCategories = numbersOfCategories[2].querySelector('h2').textContent;
+const secondTitleCategories = numbersOfCategories[1].querySelector('h2').textContent;
 
 
-// const thirdElementOfList = listOfCategoriesItems[2].childNodes[3].children.length;
+const seondElementOfList = listOfCategoriesItems[1].childNodes[3].children.length;
 
 
-// console.log(`Category: ${thirdTitleCategories}`);
+console.log(`Category: ${secondTitleCategories}`);
 
-// console.log(`Elements: ${thirdElementOfList}`);
+console.log(`Elements: ${seondElementOfList}`);
+
+
+const thirdTitleCategories = numbersOfCategories[2].querySelector('h2').textContent;
+
+
+const thirdElementOfList = listOfCategoriesItems[2].childNodes[3].children.length;
+
+
+console.log(`Category: ${thirdTitleCategories}`);
+
+console.log(`Elements: ${thirdElementOfList}`);
 
 
 
