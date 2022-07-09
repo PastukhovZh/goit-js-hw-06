@@ -24,19 +24,32 @@ const ingredients = [
   'Condiments',
 ];
 
-
-
 const fn = () => {
-  ingredients.forEach(ingridient => {
-    let listOfIngridients = document.querySelector('#ingredients');
-
-  for (let i = 1; i <= 1; i+=1) {
-    let li = document.createElement('li');
-    li.innerHTML = ingridient;
-    listOfIngridients.appendChild(li);
+  const final = ingredients.reduce((ingridient, top) => {
+    const li = document.createElement('li');
+  const newEl = document.querySelector('#ingredients').appendChild(li);
     li.classList.add('item')
-  }
-  });
+    console.log(newEl.append(top))
+  }, 0)
+  return final
+
+  // console.log(newEl)
+  // return newEl.append(final)
 }
 
 fn()
+// const fn = () => {
+//   ingredients.forEach(ingridient => {
+//     let listOfIngridients = document.querySelector('#ingredients');
+
+//   for (let i = 1; i <= 1; i+=1) {
+//     let li = document.createElement('li');
+//     li.innerHTML = ingridient;
+//     listOfIngridients.appendChild(li);
+    // li.classList.add('item')
+//   }
+//   });
+// }
+
+// fn()
+// console.log(fn(...ingredients))

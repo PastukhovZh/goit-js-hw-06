@@ -15,43 +15,59 @@
 // Category: Technologies
 // Elements: 5
 
+/////////////////////////////////////////////////
+const fn = () => {
+    
+    const test = document.querySelector('#categories')
+    
 
-const numbersOfCategories = document.querySelectorAll(".item");
+console.log(test)
 
-console.log(`Number of categories: ${numbersOfCategories.length}`);
+}
 
+fn()
 
-const listOfCategoriesItems = document.querySelectorAll('.item');
+//////////////////////////////////////////////////////////////////////////////
+// const numbersOfCategories = document.querySelectorAll(".item");
 
-
-const firstTitleCategories = numbersOfCategories[0].querySelector('h2').textContent;
-
-const firstElementOfList = listOfCategoriesItems[0].childNodes[3].children.length;
-
-console.log(`Elements: ${firstElementOfList}`);
-
-console.log(`Category: ${firstTitleCategories}`);
-
-
-
-const secondTitleCategories = numbersOfCategories[1].querySelector('h2').textContent;
+// console.log(`Number of categories: ${numbersOfCategories.length}`);
 
 
-const seondElementOfList = listOfCategoriesItems[1].childNodes[3].children.length;
-
-console.log(`Elements: ${seondElementOfList}`);
-
-console.log(`Category: ${secondTitleCategories}`);
+// const listOfCategoriesItems = document.querySelectorAll('.item');
 
 
-const thirdTitleCategories = numbersOfCategories[2].querySelector('h2').textContent;
+// const firstTitleCategories = document.querySelector('h2').textContent;
+
+// const firstElementOfList = listOfCategoriesItems[0].childNodes[3].children.length;
 
 
-const thirdElementOfList = listOfCategoriesItems[2].childNodes[3].children.length;
+// console.log(`Category: ${firstTitleCategories}`);
 
-console.log(`Elements: ${thirdElementOfList}`);
+// console.log(`Elements: ${firstElementOfList}`);
 
-console.log(`Category: ${thirdTitleCategories}`);
+
+
+// const secondTitleCategories = numbersOfCategories[1].querySelector('h2').textContent;
+
+
+// const seondElementOfList = listOfCategoriesItems[1].childNodes[3].children.length;
+
+
+// console.log(`Category: ${secondTitleCategories}`);
+
+// console.log(`Elements: ${seondElementOfList}`);
+
+
+// const thirdTitleCategories = numbersOfCategories[2].querySelector('h2').textContent;
+
+
+// const thirdElementOfList = listOfCategoriesItems[2].childNodes[3].children.length;
+
+
+// console.log(`Category: ${thirdTitleCategories}`);
+
+// console.log(`Elements: ${thirdElementOfList}`);
+
 
 
 
