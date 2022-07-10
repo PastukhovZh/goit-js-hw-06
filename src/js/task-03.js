@@ -1,10 +1,10 @@
 // Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть список ul.gallery.
 
-{/* <ul class="gallery"></ul>
-Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
+// {/* <ul class="gallery"></ul>
+// Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
 
-Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы. */}
+// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+// Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы. */}
 
 
 
@@ -25,9 +25,20 @@ const images = [
 ];
 
 
-const test = images.reduce((image),{
-  
-})
 
 
-console.log(test)
+const fn = () => {
+  const newArr = images.reduce((image, value) => {
+
+    const img = document.createElement('img')
+    const li = document.createElement('li')
+    const newImg = document.querySelector('.gallery').appendChild(li).append(img);
+    
+    img.insertAdjacentHTML("beforebegin", `<img src="${value.url}" alt="${value.alt}">`)
+return newImg
+  }, 0)
+  console.log(newArr)
+}
+
+
+fn()
