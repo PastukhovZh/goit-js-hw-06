@@ -24,32 +24,54 @@ const ingredients = [
   'Condiments',
 ];
 
-const fn = () => {
-  const final = ingredients.reduce((ingridient, top) => {
-    const li = document.createElement('li');
-  const newEl = document.querySelector('#ingredients').appendChild(li);
-    li.classList.add('item')
-    console.log(newEl.append(top))
-  }, 0)
-  return final
 
-  // console.log(newEl) 
-  // return newEl.append(final)
+// По таску 2 на ингридиентах.реддьюс(ингридиент => cоздаем ли, через тексКонтент добавляем ингридиент, добавляем клас и возвращаем, аккум это массив )  у нас получился список и за 1 действие распыления помещаем все в разметку
+// на каждом шаге цикла не добавляем
+// редьюс вам создал масиив наполненных лишек и теперь нам необходимо этот массив за 1 дейсвтие добавить в разметку - потому и используем расспыление
+
+
+/////////////////////////////////////////////////////////////////
+const arrayIngredient = ingredients.reduce((acc, ingredient) => {
+
+  acc.push(ingredient);
+  const li = document.createElement('li');
+  li.classList.add('item');
+  li.textContent = ingredient;
+  
+    
+  
+  console.log(li)
+  return acc;
 }
+  , []);
+document.querySelector('#ingredients').insertAdjacentHTML('afterbegin', arrayIngredient)
+console.log(arrayIngredient);
 
-fn()
+
+////////////////////////////////////////////////////////////////////
+
+
+// const arrayOfProducts = ingredients.reduce((start, ingredient) => [
+//   // const li = document.createElement('li');
+//   // li.classList.add('item');
+
+//   // // document.querySelector('#ingredients').appendChild(li).append(ingredient)
+//   // return [...start, ...ingredient]
+//   ...start, ...ingredient
+// ], []);
+
+
+
+
 // const fn = () => {
-//   ingredients.forEach(ingridient => {
-//     let listOfIngridients = document.querySelector('#ingredients');
-
-//   for (let i = 1; i <= 1; i+=1) {
-//     let li = document.createElement('li');
-//     li.innerHTML = ingridient;
-//     listOfIngridients.appendChild(li);
-    // li.classList.add('item')
-//   }
-//   });
+//   const final = ingredients.reduce((ingridient, top) => {
+//     const li = document.createElement('li');
+//   const newEl = document.querySelector('#ingredients').appendChild(li);
+//     li.classList.add('item')
+//     console.log(newEl.append(top))
+//   }, 0)
+//   return final
 // }
 
 // fn()
-// console.log(fn(...ingredients))
+

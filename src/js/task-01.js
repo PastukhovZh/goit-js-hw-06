@@ -28,47 +28,61 @@
 // fn()
 
 //////////////////////////////////////////////////////////////////////////////
-const numbersOfCategories = document.querySelectorAll(".item");
+// const numbersOfCategories = document.querySelectorAll(".item");
 
+// console.log(`Number of categories: ${numbersOfCategories.length}`);
+
+
+// const listOfCategoriesItems = document.querySelectorAll('.item');
+
+
+// const firstTitleCategories = document.querySelector('h2').textContent;
+
+// const firstElementOfList = listOfCategoriesItems[0].childNodes[3].children.length;
+
+
+// console.log(`Category: ${firstTitleCategories}`);
+
+// console.log(`Elements: ${firstElementOfList}`);
+
+
+
+// const secondTitleCategories = numbersOfCategories[1].querySelector('h2').textContent;
+
+
+// const seondElementOfList = listOfCategoriesItems[1].childNodes[3].children.length;
+
+
+// console.log(`Category: ${secondTitleCategories}`);
+
+// console.log(`Elements: ${seondElementOfList}`);
+
+
+// const thirdTitleCategories = numbersOfCategories[2].querySelector('h2').textContent;
+
+
+// const thirdElementOfList = listOfCategoriesItems[2].childNodes[3].children.length;
+
+
+// console.log(`Category: ${thirdTitleCategories}`);
+
+// console.log(`Elements: ${thirdElementOfList}`);
+
+
+
+// По таску 1
+// const numbersOfCategories = document.querySelectorAll(".item");
+// console.log(`Number of categories: ${numbersOfCategories.length}`); numbersOfCategories.форИч(елемента) => {
+// консолим елемент.первыйЕлементРебенок.тексКонтент
+// консолим елемент.последнийЕлементРебенокюдети.длинна}
+
+
+ const numbersOfCategories = document.querySelectorAll(".item");
 console.log(`Number of categories: ${numbersOfCategories.length}`);
 
 
-const listOfCategoriesItems = document.querySelectorAll('.item');
-
-
-const firstTitleCategories = document.querySelector('h2').textContent;
-
-const firstElementOfList = listOfCategoriesItems[0].childNodes[3].children.length;
-
-
-console.log(`Category: ${firstTitleCategories}`);
-
-console.log(`Elements: ${firstElementOfList}`);
-
-
-
-const secondTitleCategories = numbersOfCategories[1].querySelector('h2').textContent;
-
-
-const seondElementOfList = listOfCategoriesItems[1].childNodes[3].children.length;
-
-
-console.log(`Category: ${secondTitleCategories}`);
-
-console.log(`Elements: ${seondElementOfList}`);
-
-
-const thirdTitleCategories = numbersOfCategories[2].querySelector('h2').textContent;
-
-
-const thirdElementOfList = listOfCategoriesItems[2].childNodes[3].children.length;
-
-
-console.log(`Category: ${thirdTitleCategories}`);
-
-console.log(`Elements: ${thirdElementOfList}`);
-
-
-
-
+numbersOfCategories.forEach((category) => {
+    console.log(`Category: ${category.firstElementChild.textContent}`)
+    console.log(`Elements: ${category.lastElementChild.children.length}`)
+})
 

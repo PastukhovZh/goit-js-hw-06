@@ -27,18 +27,45 @@ const images = [
 
 
 
-const fn = () => {
-  const newArr = images.reduce((image, value) => {
 
-    const img = document.createElement('img')
-    const li = document.createElement('li')
-    const newImg = document.querySelector('.gallery').appendChild(li).append(img);
+  // const newArr = images.reduce((image, value) => {
+
+  //   const img = document.createElement('img')
+  //   const li = document.createElement('li')
+  //   document.querySelector('.gallery').appendChild(li).append(img);
+  //   return img.insertAdjacentHTML("beforebegin", `<img src="${value.url}" alt="${value.alt}">`)
+  // }, " ")
+
+  // console.log(newArr)
+
+
+// таск 3 на галерее или мап + джойн и сразу шаблонная ли с классо и картинкой или редьюсс с аккумом пустой стркой
+
+
+// const fn = () =>{
+  // const newImg = images.map(image => image).join()
+  // const img = document.createElement('img')
+  // const li = document.createElement('li')
+  // document.querySelector('.gallery').appendChild(li).append(img);
+
+
+  // return newImg.insertAdjacentHTML(("beforebegin", `<img src="${image.url}" alt="${image.alt}">`))
+
+
+  const destructImages = destruct => {
+    const { url, alt } = destruct
     
-    img.insertAdjacentHTML("beforebegin", `<img src="${value.url}" alt="${value.alt}">`)
-return newImg
-  }, 0)
-  console.log(newArr)
+    return `<li><img class="gallery-list" src="${url}" alt="${alt}"/></li>`
 }
 
+const imgEl = document.querySelector('.gallery');
+const addImage = images.map(destructImages).join('');
 
-fn()
+
+imgEl.insertAdjacentHTML("afterbegin", addImage);
+
+
+  // return `
+  // <img src="${image.url}" alt="${image.alt}">`
+// }
+// fn ()
