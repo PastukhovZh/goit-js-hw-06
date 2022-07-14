@@ -29,22 +29,19 @@ const ingredients = [
 // на каждом шаге цикла не добавляем
 // редьюс вам создал масиив наполненных лишек и теперь нам необходимо этот массив за 1 дейсвтие добавить в разметку - потому и используем расспыление
 
-
 /////////////////////////////////////////////////////////////////
+const ingredientsList = document.querySelector('#ingredients');
 const arrayIngredient = ingredients.reduce((acc, ingredient) => {
-
-  acc.push(ingredient);
-  const li = document.createElement('li');
-  li.classList.add('item');
-  li.textContent = ingredient;
+  const ingredientListItem = document.createElement('li');
+  ingredientListItem.classList.add('item');
+  ingredientListItem.textContent = ingredient;
   
-    
+  acc.push(ingredientListItem);
   
-  console.log(li)
   return acc;
 }
   , []);
-document.querySelector('#ingredients').insertAdjacentHTML('afterbegin', arrayIngredient)
+ingredientsList.append(...arrayIngredient)
 console.log(arrayIngredient);
 
 
