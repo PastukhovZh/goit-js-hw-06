@@ -5,11 +5,18 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const randomColorBtnClick = document.querySelector('.change-color')
-const spanColorResult = document.querySelector('.color')
+const body = document.querySelector('body')
+
+const randomColorBtnClick = document.querySelector('.change-color');
+const spanColorResult = document.querySelector('.color');
 
 
-function getRandomHex() {
+
+function clickker() {
+  body.style.backgroundColor = getRandomHexColor();
+  spanColorResult.textContent = getRandomHexColor();
 }
 
-randomColorBtnClick.addEventListener('click', getRandomHexColor)
+
+randomColorBtnClick.addEventListener('click', clickker)
+
