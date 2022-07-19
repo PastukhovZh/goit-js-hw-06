@@ -19,18 +19,19 @@ function onFormSubmit(event) {
   // console.log(`Тут написано : ${event.currentTarget.value.length}`)
 
   event.preventDefault();
-if( event.currentTarget.value.length === 0) {
- alert('Hey man, you must write at least something :/ ');
-}
-{
-    
+  if (event.currentTarget.value.length === 0) {
+    alert('Hey man, you must write at least something :/ ');
+  }
+  {
+
     const formData = new FormData(event.currentTarget);
 
-  console.log(formData);
+    console.log(formData);
 
-  formData.forEach((value, name) => {
-    console.log(name);
-    console.log(value);
+    formData.forEach((value, name) => {
+      console.log(name);
+      console.log(value);
+    }
+    )
   }
-)}
 }
