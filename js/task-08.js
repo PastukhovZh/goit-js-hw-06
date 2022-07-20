@@ -9,17 +9,17 @@
 const form = document.querySelector('.login-form');
 
 
-form.addEventListener('input', onFormSubmit);
+form.addEventListener('submit', onFormSubmit);
 
 
 
 function onFormSubmit(event) {
   const { elements: { email, password } } = event.currentTarget;
 
-  console.log(`Тут написано : ${email.value}`)
+  // console.log(`Тут написано : ${email.value}`)
 
   event.preventDefault();
-  if (email.value.length === 0 || password.value.length === 0) {
+  if (email.value === '' || password.value === '') {
     return alert('Hey, this is wrong result. Please complete all fields!');
 }
   {
