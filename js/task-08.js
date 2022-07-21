@@ -10,7 +10,7 @@ const form = document.querySelector('.login-form');
 
 
 form.addEventListener('submit', onFormSubmit);
-
+const userData = {};  
 
 
 function onFormSubmit(event) {
@@ -28,11 +28,8 @@ function onFormSubmit(event) {
 
     console.log(formData);
 
-    formData.forEach((value, name) => {
-      console.log(name);
-      console.log(value);
-    }
-    )
+    formData.forEach((value, name) => {userData[name] = value;     });
+    console.log(userData);
 
         event.currentTarget.reset();
     

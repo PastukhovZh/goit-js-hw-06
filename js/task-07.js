@@ -5,7 +5,7 @@
 const scrollBar = document.querySelector('#font-size-control');
 const textZoom = document.querySelector('#text');
 
-scrollBar.addEventListener('change', changeValuePx)
+scrollBar.addEventListener('input', changeValuePx)
 
 function changeValuePx() {
     textZoom.style.fontSize = this.value + 'px';
